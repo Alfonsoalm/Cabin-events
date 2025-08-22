@@ -1,0 +1,36 @@
+// variables.scss
+
+// Colores
+$primary-color: #765210;         // color principal de la marca
+$secondary-color: #583d0c;       // color secundario
+$text-color-light: #fff;         // textos claros
+$text-color-dark: #333;          // textos oscuros
+$text-color-medium: #555;        // textos intermedios
+$background-light: #f8f8f8;      // fondos claros
+$background-section: #f9f9f9;    // fondo de secciones tipo reserva o features
+$card-background: #fff;          
+$footer-bg: #341d07;                
+$footer-text: #fff;               
+$shadow-color: rgba(0, 0, 0, 0.1);
+$shadow-hover: rgba(0, 0, 0, 0.15);
+$border-color: #ccc;
+
+// Tipografía
+$font-size-title: 3rem;
+$font-size-subtitle: 1.5rem;
+$font-size-base: 1rem;
+$font-size-heading: 2.5rem;       
+$font-size-text: 1rem;            
+$font-weight-bold: 700;
+$font-weight-medium: 500;
+
+// Bordes
+$border-radius: 0.5rem;
+
+// Espaciado
+$padding-button: 1rem 2rem;
+$padding-input: 0.75rem;
+
+// Sombras
+$box-shadow: 0 4px 10px $shadow-color;
+$box-shadow-hover: 0 6px 15px $shadow-hover;

@@ -1,0 +1,18 @@
+export const reviewsList = [
+  { name: 'Denia Rosé', text: 'Me encanta 🤩', rating: 5 },
+  { name: 'Alma Perdida', text: 'Genial, el propietario un encanto. El sitio muy bien acondicionado.', rating: 5 },
+  { name: 'Mariló Aguilera', text: 'Muy recomendable, todo limpio y puntual. Lo pasamos súper!!', rating: 5 },
+  { name: 'Francisco Padilla', text: 'Un lugar maravilloso. Gracias a Domingo y Sergio por hacer especial nuestro día.', rating: 5 },
+  { name: 'María Pérez Castillo', text: 'Un sitio bonito para eventos pequeños. Todo muy limpio.', rating: 5 },
+  { name: 'Ana Perez', text: 'Excelente local y atención espléndida. Ideal para reuniones de empresa.', rating: 5 },
+  { name: 'Andrés Lozano Millán', text: 'Un local estupendo y muy buen trato. Recomendable 100%.', rating: 5 },
+  { name: 'J RS', text: 'Cumpleaños bien, pero el aire acondicionado no funcionaba.', rating: 3 },
+  { name: 'Antonio Estévez', text: 'Ideal para celebrar cualquier evento.', rating: 5 },
+  { name: 'Juana Márquez Quesada', text: 'Lo recomiendo muchísimo para celebraciones.', rating: 5 },
+  { name: 'Alba Guti', text: 'Excelente local para cualquier celebración.', rating: 5 },
+  { name: 'Jacob Muñoz', text: 'Un lugar con personas maravillosas!!!', rating: 5 },
+  { name: 'Conchi García', text: 'Muy buena experiencia. Volvería sin duda.', rating: 5 },
+  { name: 'Jose Manuel Tavira Mármol', text: 'Muy bien en general.', rating: 4 },
+  { name: 'Consuelo Mendoza', text: 'Un sitio fantástico para eventos.', rating: 5 },
+  { name: 'Javi Osuna Ruz', text: 'Muy recomendable, todo perfecto.', rating: 5 },
+];

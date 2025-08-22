@@ -1,0 +1,43 @@
+@use '../../scss/variables.scss' as vars;
+
+.hero {
+  background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.5)),
+              url('/hero-bg.webp') center/cover no-repeat;
+  color: vars.$text-color-light;
+  text-align: center;
+  padding: 8rem 2rem;
+
+  .hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+
+    .title {
+      font-size: vars.$font-size-title;
+      font-weight: vars.$font-weight-bold;
+      margin-bottom: 1rem;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.7); // mejora contraste
+    }
+
+    .subtitle {
+      font-size: vars.$font-size-subtitle;
+      margin-bottom: 2rem;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
+    }
+
+    .cta-button {
+      background-color: vars.$primary-color;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.9);
+      border: none;
+      padding: 1rem 2rem;
+      font-size: 1.2rem;
+      border-radius: vars.$border-radius;
+      color: vars.$text-color-light;
+      cursor: pointer;
+      transition: background-color 0.3s;
+
+      &:hover {
+        background-color: vars.$secondary-color;
+      }
+    }
+  }
+}

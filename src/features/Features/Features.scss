@@ -1,0 +1,38 @@
+@use '../../scss/variables.scss' as vars;
+
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 4rem 2rem;
+  background-color: vars.$background-light;
+  text-align: center;
+
+  .feature {
+    flex: 1 1 250px;
+    max-width: 300px;
+    background-color: vars.$card-background;
+    padding: 2rem 1.5rem;
+    border-radius: vars.$border-radius;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    transition: transform 0.3s, box-shadow 0.3s;
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      color: vars.$text-color-dark;
+    }
+
+    p {
+      font-size: vars.$font-size-base;
+      color: vars.$text-color-medium;
+      line-height: 1.5;
+    }
+  }
+}

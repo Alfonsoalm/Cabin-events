@@ -1,0 +1,60 @@
+@use '../../scss/variables.scss' as vars;
+
+.header {
+  background-color: vars.$primary-color;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.948);
+  overflow: visible; // 👈 deja que el árbol sobresalga
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    .logo {
+      display: flex;
+      align-items: center;
+      font-size: 1.8rem;
+      font-weight: vars.$font-weight-bold;
+      color: vars.$text-color-light;
+      gap: 0.5rem;
+
+      .logo-img {
+        width: 130px;
+        height: auto; 
+      }
+    }
+
+    .nav {
+      display: flex;
+      gap: 1.5rem;
+      align-items: center;
+
+      a {
+        text-decoration: none;
+        text-align: center;
+        color: vars.$text-color-light;
+        font-weight: vars.$font-weight-medium;
+        transition: color 0.3s;
+
+        &:hover {
+          color: vars.$secondary-color;
+        }
+      }
+
+      .btn-reserve {
+        padding: 0.5rem 1rem;
+        background-color: vars.$secondary-color;
+        color: vars.$text-color-light;
+        border-radius: vars.$border-radius;
+        font-weight: vars.$font-weight-bold;
+
+        &:hover {
+          background-color: vars.$secondary-color;
+        }
+      }
+    }
+  }
+}
