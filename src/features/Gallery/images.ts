@@ -12,11 +12,12 @@ export const images: Image[] = [
   { src: './image50.webp', alt: 'Mobiliario multifuncional para albergar hasta 32 personas' },
   { src: './image51.webp', alt: 'Vista panorámica del salón' },
   { src: './image7.webp', alt: 'Photocall para hacerse fotos' },
-  { src: './image3.webp', alt: 'Televesor de 70 pulgadas con altavoces integrados' },
+  { src: './image3.webp', alt: 'Televisor de 70 pulgadas con altavoces integrados' },
   { src: './image10.webp', alt: 'Cocina integrada con horno grande, pequeño, microondas, frigorifico, Congelador' },
+  { src: './image5.webp', alt: 'Hall de baño' },
+  { src: './image19.webp', alt: 'Mesas amplias reconfigurables' },
   { src: './image2.webp', alt: '' },
   { src: './image4.webp', alt: '' },
-  { src: './image5.webp', alt: '' },
   { src: './image9.webp', alt: '' },
   { src: './image12.webp', alt: '' },
   { src: './image13.webp', alt: '' },
@@ -25,7 +26,6 @@ export const images: Image[] = [
   { src: './image16.webp', alt: '' },
   { src: './image17.webp', alt: '' },
   { src: './image18.webp', alt: '' },
-  { src: './image19.webp', alt: '' },
   { src: './image20.webp', alt: '' },
   { src: './image21.webp', alt: '' },
   { src: './image22.webp', alt: '' },
@@ -60,4 +60,4 @@ export const images: Image[] = [
 ];
 
 // si quieres mostrar solo un subset (ej. portada de galería)
-export const visibleImages = images.slice(0, 8);
+export const visibleImages = images.slice(0, 10);

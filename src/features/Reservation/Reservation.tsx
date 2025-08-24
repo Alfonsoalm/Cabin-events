@@ -11,7 +11,7 @@ interface FormData {
   name: string;
   email: string;
   phone: string;
-  date?: Date; 
+  date?: Date;
   guests: string;
   eventType: string;
   message: string;
@@ -33,43 +33,54 @@ const Reservation = () => {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-  e.preventDefault();
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
 
-  emailjs
-    .send(
-      import.meta.env.VITE_EMAILJS_SERVICE_ID,
-      import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
-      {
-        name: formData.name,
-        email: formData.email,
-        phone: formData.phone,
-        date: formData.date?.toLocaleDateString() || "",
-        guests: formData.guests,
-        eventType: formData.eventType,
-        message: formData.message,
-      },
-      import.meta.env.VITE_EMAILJS_PUBLIC_KEY
-    )
-    .then(
-      () => {
-        alert("Solicitud enviada 🎉");
-        setFormData({
-          name: "",
-          email: "",
-          phone: "",
-          date: undefined,
-          guests: "",
-          eventType: "",
-          message: "",
-        });
-      },
-      (err) => {
-        console.error(err);
-        alert("Hubo un error al enviar la solicitud ❌");
-      }
-    );
-};
+    // Reemplaza con tus propios IDs de emailjs
+    const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+    const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+    const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+
+    // Usar un modal en lugar de alert
+    const showMessage = (message: string) => {
+        // Aquí puedes implementar una lógica para mostrar un modal con el mensaje
+        console.log(message);
+    };
+
+    emailjs
+      .send(
+        serviceId,
+        templateId,
+        {
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          date: formData.date?.toLocaleDateString() || "",
+          guests: formData.guests,
+          eventType: formData.eventType,
+          message: formData.message,
+        },
+        publicKey
+      )
+      .then(
+        () => {
+          showMessage("Solicitud enviada 🎉");
+          setFormData({
+            name: "",
+            email: "",
+            phone: "",
+            date: undefined,
+            guests: "",
+            eventType: "",
+            message: "",
+          });
+        },
+        (err) => {
+          console.error(err);
+          showMessage("Hubo un error al enviar la solicitud ❌");
+        }
+      );
+  };
 
   return (
     <section className="reservation-section" id="reservation">
@@ -123,14 +134,14 @@ const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
 
             <div className="form-group half-width">
               <label htmlFor="date">Fecha del evento</label>
-                <DayPicker
-                  mode="single"
-                  selected={formData.date}
-                  onSelect={(date) => setFormData((prev) => ({ ...prev, date }))}
-                  disabled={blockedDates}
-                  captionLayout="dropdown"
-                  locale={es}
-                />
+              <DayPicker
+                mode="single"
+                selected={formData.date}
+                onSelect={(date) => setFormData((prev) => ({ ...prev, date }))}
+                disabled={blockedDates}
+                captionLayout="dropdown"
+                locale={es}
+              />
             </div>
           </div>
 

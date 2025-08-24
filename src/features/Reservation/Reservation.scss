@@ -70,15 +70,28 @@
       }
 
       &.half-width {
-        width: 48%;
+        width: 100%; // Modificado para móviles
       }
     }
 
     .form-row {
       display: flex;
-      gap: 4%;
-      flex-wrap: wrap;
+      flex-direction: column; // Modificado para que los elementos se apilen en móviles
+      gap: 1.5rem;
     }
+
+    // Media query para pantallas de más de 768px (tablets y desktops)
+    @media (min-width: 768px) {
+      .form-row {
+        flex-direction: row;
+        gap: 4%;
+      }
+
+      .form-group.half-width {
+        width: 48%;
+      }
+    }
+
 
     .submit-button {
       background-color: vars.$primary-color;
