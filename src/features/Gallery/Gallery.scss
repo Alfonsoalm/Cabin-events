@@ -15,9 +15,8 @@
   .gallery-grid {
     display: grid;
     gap: 1rem;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-auto-rows: 500px;
-    grid-auto-flow: row dense;
+    // Por defecto, muestra 2 columnas en móviles
+    grid-template-columns: repeat(1, 1fr);
 
     .gallery-item {
       cursor: pointer;
@@ -40,6 +39,20 @@
         font-size: vars.$font-size-subtitle;
         color: vars.$text-color-light;
       }
+    }
+  }
+
+  // Media query para tablets (3 columnas)
+  @media (min-width: 768px) {
+    .gallery-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  // Media query para desktops (5 columnas)
+  @media (min-width: 1200px) {
+    .gallery-grid {
+      grid-template-columns: repeat(5, 1fr);
     }
   }
 

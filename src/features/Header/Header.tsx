@@ -1,25 +1,33 @@
 import React from 'react';
 import { navLinks } from './navLinks';
+import { MdOutlineCabin } from 'react-icons/md';
 import './Header.scss';
 
 const Header = React.memo(() => {
   return (
     <header className="header">
       <div className="container">
-        <div className="logo" aria-label="Eventos La Cabaña">
-          {/* <img
-            src="/.webp"
-            alt="Decoración cabaña"
-            className="logo-img"
-            width={48}
-            height={48}
-            loading="lazy"
-          /> */}
-          Eventos La Cabaña
+        <div className="logo" aria-label="Eventos La Cabaña - Bodas, cumpleaños y reuniones en Córdoba">
+          <MdOutlineCabin 
+            size={48} 
+            aria-hidden="true" 
+            className='logo-img'
+            title="Icono de cabina - Eventos La Cabaña en Córdoba"
+          />
+          <span className="logo-text">
+            Eventos La Cabaña
+          </span>
         </div>
+
+        {/* Menú de navegación */}
         <nav className="nav" aria-label="Menú principal">
           {navLinks.map((link) => (
-            <a key={link.href} href={link.href} className={link.className ?? ''}>
+            <a
+              key={link.href}
+              href={link.href}
+              className={link.className ?? ''}
+              title={`${link.label} - Eventos en Córdoba`}
+            >
               {link.label}
             </a>
           ))}
