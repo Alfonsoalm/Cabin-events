@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { DayPicker } from 'react-day-picker';
 import emailjs from "emailjs-com";
 import { blockedDates } from './blockedDates';
+import { es } from "date-fns/locale";
 import 'react-day-picker/dist/style.css';
 import './Reservation.scss';
 
@@ -128,6 +129,7 @@ const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
                   onSelect={(date) => setFormData((prev) => ({ ...prev, date }))}
                   disabled={blockedDates}
                   captionLayout="dropdown"
+                  locale={es}
                 />
             </div>
           </div>

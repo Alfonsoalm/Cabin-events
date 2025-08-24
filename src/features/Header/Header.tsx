@@ -7,14 +7,14 @@ const Header = React.memo(() => {
     <header className="header">
       <div className="container">
         <div className="logo" aria-label="Eventos La Cabaña">
-          <img
-            src="/cabin-header.webp"
+          {/* <img
+            src="/.webp"
             alt="Decoración cabaña"
             className="logo-img"
             width={48}
             height={48}
             loading="lazy"
-          />
+          /> */}
           Eventos La Cabaña
         </div>
         <nav className="nav" aria-label="Menú principal">

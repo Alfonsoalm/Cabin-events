@@ -24,7 +24,7 @@
     }
 
     h2 {
-      font-size: 1.8rem;
+      font-size: 1.6rem;
       margin-bottom: 1rem;
       color: vars.$text-color-dark;
     }
@@ -32,7 +32,28 @@
     p {
       font-size: vars.$font-size-base;
       color: vars.$text-color-medium;
-      line-height: 1.5;
+      line-height: 1.4;
+    }
+
+    .icon {
+      margin-top: 1rem;
+      color: vars.$primary-color;
+    }
+
+    &.price {
+      background: linear-gradient(135deg, vars.$primary-color, vars.$secondary-color);
+      color: white;
+
+      h2 {
+        color: white;
+      }
+
+      p {
+        font-size: 1.1rem;
+        font-weight: bold;
+        margin: 0.3rem 0;
+        color: white;
+      }
     }
   }
 }

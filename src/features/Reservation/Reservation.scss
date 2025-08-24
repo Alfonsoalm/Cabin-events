@@ -81,18 +81,19 @@
     }
 
     .submit-button {
-      margin-top: 1rem;
-      padding: 1rem 2rem;
       background-color: vars.$primary-color;
-      color: vars.$text-color-light;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.9);
       border: none;
+      padding: 1rem 2rem;
+      font-size: 1.2rem;
       border-radius: vars.$border-radius;
-      font-weight: vars.$font-weight-bold;
+      color: vars.$text-color-light;
       cursor: pointer;
       transition: background-color 0.3s;
 
       &:hover {
         background-color: vars.$secondary-color;
+        color: vars.$text-color-dark;
       }
     }
   }

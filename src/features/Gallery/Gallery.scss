@@ -3,25 +3,29 @@
 .gallery {
   padding: 4rem 2rem;
   text-align: center;
+  background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)),
+              url('/image46.webp') center/cover no-repeat;
 
   h2 {
     margin-bottom: 2rem;
     font-size: vars.$font-size-title;
-    color: vars.$text-color-dark;
+    color: vars.$text-color-light;
   }
 
   .gallery-grid {
     display: grid;
     gap: 1rem;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-auto-rows: 500px;
+    grid-auto-flow: row dense;
 
     .gallery-item {
       cursor: pointer;
 
       img {
         width: 100%;
-        height: 250px;
-        object-fit: cover; // evita deformaciones
+        height: 350px;
+        object-fit: cover;
         border-radius: vars.$border-radius;
         transition: transform 0.3s;
       }
@@ -34,7 +38,7 @@
         text-align: center;
         margin-top: 0.5rem;
         font-size: vars.$font-size-subtitle;
-        color: vars.$text-color-medium;
+        color: vars.$text-color-light;
       }
     }
   }
@@ -67,11 +71,9 @@
       color: white;
       cursor: pointer;
     }
-
     .prev, .next {
       position: absolute;
       top: 50%;
-      transform: translateY(-50%);
       font-size: 2rem;
       background: none;
       border: none;
@@ -80,7 +82,7 @@
       padding: 0 1rem;
     }
 
-    .prev { left: 20px; }
-    .next { right: 20px; }
+    .prev { left: 400px; }
+    .next { right: 400px; }
   }
 }

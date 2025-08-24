@@ -1,17 +1,22 @@
+@use '../../scss/variables.scss' as vars;
+
+
 .reviews {
   padding: 3rem 1rem;
-  background: #f9f9f9;
+  background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)),
+              url('/hero-bg.webp') center/cover no-repeat;
   text-align: center;
 
   h2 {
     font-size: 2rem;
     margin-bottom: 2rem;
+    color: vars.$text-color-light;
   }
 
 .reviews-summary {
     font-size: 1.1rem;
-    color: #555;
-    margin-bottom: 2rem; // 👈 espacio debajo del summary
+    color: vars.$text-color-light;
+    margin-bottom: 2rem;
   }
 
   .reviews-grid {

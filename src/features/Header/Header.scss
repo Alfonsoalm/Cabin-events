@@ -1,6 +1,7 @@
 @use '../../scss/variables.scss' as vars;
 
 .header {
+  background: linear-gradient(vars.$primary-color, rgba(150, 218, 214, 0.1)),center/cover no-repeat;
   background-color: vars.$primary-color;
   padding: 1rem 2rem;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.948);
@@ -16,8 +17,9 @@
     .logo {
       display: flex;
       align-items: center;
-      font-size: 1.8rem;
-      font-weight: vars.$font-weight-bold;
+      font-size: 2rem;
+      font-family:'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+      font-style: italic;
       color: vars.$text-color-light;
       gap: 0.5rem;
 
@@ -46,14 +48,10 @@
 
       .btn-reserve {
         padding: 0.5rem 1rem;
-        background-color: vars.$secondary-color;
+        background-color: vars.$primary-color;
         color: vars.$text-color-light;
         border-radius: vars.$border-radius;
         font-weight: vars.$font-weight-bold;
-
-        &:hover {
-          background-color: darken(vars.$secondary-color, 10%);
-        }
       }
     }
   }

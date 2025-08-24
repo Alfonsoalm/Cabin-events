@@ -18,7 +18,7 @@ const ReviewItem = React.memo(({ review }: { review: typeof reviewsList[number] 
 const Reviews = () => {
   return (
     <section className="reviews" id="reviews" aria-label="Customer reviews">
-      <h2>Reviews</h2>
+      <h2>Opinión de Clientes</h2>
       <p className="reviews-summary">⭐ 4.8/5 en Google con 19 reseñas</p>
       <div className="reviews-grid">
         {reviewsList.map((review) => (
