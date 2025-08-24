@@ -5,7 +5,7 @@ import Gallery from "../features/Gallery/Gallery";
 import Header from "../features/Header/Header";
 import Hero from "../features/Hero/Hero";
 import Location from "../features/Location/Location";
-import Pricing from "../features/Pricing/Pricing";
+// import Pricing from "../features/Pricing/Pricing";
 import Reservation from "../features/Reservation/Reservation";
 import Reviews from "../features/Reviews/Reviews";
 
@@ -19,7 +19,7 @@ function LandingPage() {
         <Gallery />
         <Location />
         <Reviews />    
-        <Pricing />    
+        {/* <Pricing />     */}
         <Reservation />
         <Contact />
       </main>

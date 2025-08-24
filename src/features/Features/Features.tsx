@@ -18,7 +18,7 @@ const Features = () => {
       <article className="feature price">
         <h2>Tarifas de Alquiler</h2>
         <p>Lunes a Jueves: <strong>100€</strong></p>
-        <p>Viernes y Domingos: <strong>129€</strong></p>
+        <p>Viernes y Domingos: <strong>120€</strong></p>
         <p>Sábados: <strong>150€</strong></p>
         <p>Fianza: <strong>100€</strong></p>
       </article>
