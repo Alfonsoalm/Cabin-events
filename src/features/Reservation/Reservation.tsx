@@ -168,7 +168,6 @@ const Reservation = () => {
                 required
               >
                 <option value="">Selecciona...</option>
-                <option value="boda">Boda</option>
                 <option value="cumpleanos">Cumpleaños</option>
                 <option value="corporativo">Corporativo</option>
                 <option value="otro">Otro</option>

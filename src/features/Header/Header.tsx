@@ -7,7 +7,7 @@ const Header = React.memo(() => {
   return (
     <header className="header">
       <div className="container">
-        <div className="logo" aria-label="Eventos La Cabaña - Bodas, cumpleaños y reuniones en Córdoba">
+        <div className="logo" aria-label="Eventos La Cabaña - Eventos, cumpleaños y reuniones en Córdoba">
           <MdOutlineCabin 
             size={48} 
             aria-hidden="true" 

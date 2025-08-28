@@ -1,3 +1,4 @@
+import CookieBanner from "../components/CookieBanner";
 import Contact from "../features/Contact/Contact";
 import Features from "../features/Features/Features";
 import Footer from "../features/Footer/Footer";
@@ -18,12 +19,12 @@ function LandingPage() {
         <Features />
         <Gallery />
         <Location />
-        <Reviews />    
-        {/* <Pricing />     */}
+        <Reviews />
         <Reservation />
         <Contact />
       </main>
       <Footer />
+      <CookieBanner />
     </>
   );
 }
