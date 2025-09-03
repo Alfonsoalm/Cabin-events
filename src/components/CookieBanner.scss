@@ -13,8 +13,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 400px;
-  width: 90%;
+  max-width: 60%;
   z-index: 9999;
   text-align: center;
   font-family: "Arial", sans-serif;
@@ -31,6 +30,7 @@
 
   .buttons {
     display: flex;
+    width: 40%;
     gap: 10px;
 
     button {
@@ -43,7 +43,7 @@
 
       &.accept {
         background-color: vars.$secondary-color;
-        color: vars.$text-color-light;
+        color: vars.$text-color-dark;
 
         &:hover {
           background-color: lighten(vars.$secondary-color, 10%);
