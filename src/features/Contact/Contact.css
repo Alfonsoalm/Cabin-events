@@ -1,0 +1,19 @@
+.contact {
+  padding: 30px;
+  background-color: #fff;
+  text-align: center;
+}
+.contact h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+.contact p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 0.75rem;
+  line-height: 1.5;
+}
+.contact p:last-child {
+  margin-bottom: 0;
+}/*# sourceMappingURL=Contact.css.map */

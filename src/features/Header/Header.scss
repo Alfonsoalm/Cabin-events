@@ -1,11 +1,14 @@
 @use '../../scss/variables.scss' as vars;
 
 .header {
-  background: linear-gradient(vars.$primary-color, rgba(150, 218, 214, 0.1)),center/cover no-repeat;
-  background-color: vars.$primary-color;
-  padding: 1rem 2rem;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.948);
-  overflow: visible;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(vars.$primary-color, 0.85);
+  backdrop-filter: blur(6px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  padding: 0.2rem 1rem;
+  transition: all 0.3s ease;
 
   .container {
     display: flex;
@@ -18,25 +21,25 @@
       display: flex;
       align-items: center;
       font-size: 2rem;
-      font-family:'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+      font-family: 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
       font-style: italic;
       color: vars.$text-color-light;
-      gap: 3rem;
+      gap: 1rem;
 
       .logo-img {
-        width: 100px;
+        width: 60px;
         height: auto;
       }
     }
 
     .nav {
       display: flex;
-      gap: 1.5rem;
+      gap: 0.4rem;
       align-items: center;
+      text-align: center;
 
       a {
         text-decoration: none;
-        text-align: center;
         color: vars.$text-color-light;
         font-weight: vars.$font-weight-medium;
         transition: color 0.3s;
@@ -56,14 +59,14 @@
     }
   }
 
-  // 🔹 Responsive
+  /* 🔹 Responsive */
   @media (max-width: 992px) {
-    padding: 1rem;
+    padding: 0.8rem 1rem;
 
     .container {
       flex-direction: column;
       align-items: flex-start;
-      gap: 1rem;
+      gap: 0.8rem;
 
       .nav {
         flex-direction: column;
@@ -82,57 +85,16 @@
   @media (max-width: 576px) {
     .container {
       .logo {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
 
         .logo-img {
-          width: 100px;
+          width: 45px;
         }
       }
 
       .nav {
-        gap: 0.5rem;
+        gap: 0.4rem;
       }
     }
   }
-}
-
-// 🔹 Estilos básicos para toda la página
-body {
-  color: vars.$text-color-dark;
-  margin: 0;
-  padding: 0;
-  line-height: 1.6;
-  background-color: vars.$background-light;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1rem;
-}
-
-section {
-  padding: 3rem 0;
-
-  @media (max-width: 768px) {
-    padding: 2rem 0;
-  }
-}
-
-button {
-  cursor: pointer;
-  border: none;
-  outline: none;
-  transition: all 0.3s;
-}
-
-img {
-  max-width: 100%;
-  display: block;
-  height: auto;
 }

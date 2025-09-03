@@ -3,8 +3,8 @@
 .gallery {
   padding: 4rem 2rem;
   text-align: center;
-  background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)),
-              url('/image46.webp') center/cover no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
+    url('/image46.webp') center/cover no-repeat;
 
   h2 {
     margin-bottom: 2rem;
@@ -15,7 +15,7 @@
   .gallery-grid {
     display: grid;
     gap: 1rem;
-    // Por defecto, muestra 2 columnas en móviles
+    // Moviles
     grid-template-columns: repeat(1, 1fr);
 
     .gallery-item {
@@ -38,18 +38,19 @@
         margin-top: 0.5rem;
         font-size: vars.$font-size-subtitle;
         color: vars.$text-color-light;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
       }
     }
   }
 
-  // Media query para tablets (3 columnas)
+  // Tablets
   @media (min-width: 768px) {
     .gallery-grid {
       grid-template-columns: repeat(3, 1fr);
     }
   }
 
-  // Media query para desktops (5 columnas)
+  // Escritorio
   @media (min-width: 1200px) {
     .gallery-grid {
       grid-template-columns: repeat(5, 1fr);
@@ -62,7 +63,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0,0,0,0.7);
+    background: rgba(0, 0, 0, 0.7);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -71,9 +72,9 @@
     img.lightbox-img {
       max-width: 90%;
       max-height: 80%;
-      object-fit: contain; // mantiene proporciones
+      object-fit: contain;
       border-radius: vars.$border-radius;
-      box-shadow: 0 0 20px rgba(0,0,0,0.5);
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
     }
 
     .close {
@@ -84,7 +85,9 @@
       color: white;
       cursor: pointer;
     }
-    .prev, .next {
+
+    .prev,
+    .next {
       position: absolute;
       top: 50%;
       font-size: 2rem;
@@ -93,9 +96,40 @@
       color: white;
       cursor: pointer;
       padding: 0 1rem;
+      transform: translateY(-50%);
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.9);
     }
 
-    .prev { left: 400px; }
-    .next { right: 400px; }
+    // Escritorio
+    .prev {
+      left: 400px;
+    }
+
+    .next {
+      right: 400px;
+    }
+
+    // Tablets
+    @media (max-width: 992px) {
+      .prev {
+        left: 100px;
+      }
+
+      .next {
+        right: 100px;
+      }
+    }
+
+    // Móviles
+    @media (max-width: 576px) {
+      .prev {
+        left: 20px;
+      }
+
+      .next {
+        right: 20px;
+      }
+    }
+
   }
 }

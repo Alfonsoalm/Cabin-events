@@ -1,0 +1,78 @@
+.pricing-section {
+  padding: 3rem 1rem;
+  color: #333;
+}
+.pricing-section .pricing-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+.pricing-section .pricing-header h2 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+.pricing-section .pricing-header p {
+  font-size: 2rem;
+  font-style: italic;
+}
+.pricing-section .pricing-card {
+  max-width: 400px;
+  margin: 0 auto;
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  position: relative;
+  /* Badge rojo grande */
+}
+.pricing-section .pricing-card .offer-badge {
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  background: #10b40b;
+  color: white;
+  font-weight: bold;
+  font-size: 2rem;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+.pricing-section .pricing-card h2 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.pricing-section .pricing-card .price {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+.pricing-section .pricing-card .price .original-price {
+  text-decoration: line-through;
+  color: #888;
+  margin-right: 0.5rem;
+}
+.pricing-section .pricing-card .price .discounted-price {
+  font-weight: bold;
+  color: #007bff;
+}
+.pricing-section .pricing-card .countdown {
+  margin-bottom: 1rem;
+  font-weight: bold;
+  color: #ff3e3e;
+}
+.pricing-section .pricing-card .btn-primary {
+  background-color: #412e0b;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.9);
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  border-radius: 0.5rem;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.pricing-section .pricing-card .btn-primary:hover {
+  background-color: #ba9144;
+  color: #333;
+}/*# sourceMappingURL=Pricing.css.map */

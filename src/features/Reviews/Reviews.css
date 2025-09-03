@@ -1,0 +1,43 @@
+.reviews {
+  padding: 3rem 1rem;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url("/hero-bg.webp") center/cover no-repeat;
+  text-align: center;
+}
+.reviews h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #fff;
+}
+.reviews .reviews-summary {
+  font-size: 1.1rem;
+  color: #fff;
+  margin-bottom: 2rem;
+}
+.reviews .reviews-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.reviews .review {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  text-align: left;
+}
+.reviews .review .review-text {
+  font-style: italic;
+  margin-bottom: 1rem;
+  color: #444;
+}
+.reviews .review .review-name {
+  font-weight: bold;
+  color: #222;
+  margin-bottom: 0.5rem;
+}
+.reviews .review .review-rating {
+  color: #f5a623;
+  font-size: 1.2rem;
+}/*# sourceMappingURL=Reviews.css.map */

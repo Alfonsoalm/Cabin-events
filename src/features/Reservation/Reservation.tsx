@@ -3,9 +3,9 @@ import { DayPicker } from 'react-day-picker';
 import emailjs from "emailjs-com";
 import { blockedDates } from './blockedDates';
 import { es } from "date-fns/locale";
+import Toast from './Toast';
 import 'react-day-picker/dist/style.css';
 import './Reservation.scss';
-
 
 interface FormData {
   name: string;
@@ -28,24 +28,25 @@ const Reservation = () => {
     message: '',
   });
 
+  const [toastMessage, setToastMessage] = useState<string | null>(null);
+  const [toastType, setToastType] = useState<"success" | "error">("success");
+
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
+  const showToast = (message: string, type: "success" | "error" = "success") => {
+    setToastMessage(message);
+    setToastType(type);
+  };
+
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    // Reemplaza con tus propios IDs de emailjs
     const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
     const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
     const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
-
-    // Usar un modal en lugar de alert
-    const showMessage = (message: string) => {
-        // Aquí puedes implementar una lógica para mostrar un modal con el mensaje
-        console.log(message);
-    };
 
     emailjs
       .send(
@@ -64,7 +65,7 @@ const Reservation = () => {
       )
       .then(
         () => {
-          showMessage("Solicitud enviada 🎉");
+          showToast("¡Solicitud enviada con éxito! 🎉", "success");
           setFormData({
             name: "",
             email: "",
@@ -77,7 +78,7 @@ const Reservation = () => {
         },
         (err) => {
           console.error(err);
-          showMessage("Hubo un error al enviar la solicitud ❌");
+          showToast("Hubo un error al enviar la solicitud ❌", "error");
         }
       );
   };
@@ -192,6 +193,14 @@ const Reservation = () => {
           </button>
         </form>
       </div>
+
+      {toastMessage && (
+        <Toast 
+          message={toastMessage} 
+          type={toastType} 
+          onClose={() => setToastMessage(null)} 
+        />
+      )}
     </section>
   );
 };

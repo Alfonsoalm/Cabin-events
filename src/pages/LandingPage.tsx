@@ -9,6 +9,7 @@ import Location from "../features/Location/Location";
 // import Pricing from "../features/Pricing/Pricing";
 import Reservation from "../features/Reservation/Reservation";
 import Reviews from "../features/Reviews/Reviews";
+import './LandingPage.scss';
 
 function LandingPage() {
   return (

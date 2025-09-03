@@ -1,0 +1,94 @@
+@charset "UTF-8";
+.hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)), url("/portada.webp") center/cover no-repeat;
+  color: #eee8e8;
+  text-align: center;
+  padding: 4rem 2rem;
+  /* Tablet: videos debajo del contenido, lado a lado */
+  /* Móvil: solo video2 debajo del botón */
+}
+.hero .hero-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+.hero .hero-container .hero-content {
+  max-width: 800px;
+  text-align: center;
+}
+.hero .hero-container .hero-content .title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+.hero .hero-container .hero-content .subtitle {
+  font-size: 1.2rem;
+  font-style: italic;
+  margin-bottom: 2rem;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+}
+.hero .hero-container .hero-content .description {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  text-align: justify;
+  letter-spacing: 0.5px;
+  line-height: 1.6;
+}
+.hero .hero-container .hero-content .cta-button {
+  background-color: #412e0b;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.9);
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  border-radius: 0.5rem;
+  color: #eee8e8;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.hero .hero-container .hero-content .cta-button:hover {
+  background-color: #ba9144;
+  color: #333;
+}
+.hero .hero-container .hero-videos-row {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.hero .hero-container .hero-videos-row .hero-video {
+  flex: 1 1 250px;
+  max-width: 300px;
+}
+.hero .hero-container .hero-videos-row .hero-video video {
+  width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.6);
+}
+@media (max-width: 992px) {
+  .hero .hero-videos-row {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+  }
+  .hero .hero-videos-row .hero-video {
+    max-width: 45%;
+  }
+}
+@media (max-width: 768px) {
+  .hero .hero-videos-row {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .hero .hero-videos-row .hero-video:first-child {
+    display: none;
+  }
+  .hero .hero-videos-row .hero-video:last-child {
+    max-width: 90%;
+    margin-top: 2rem;
+  }
+}/*# sourceMappingURL=Hero.css.map */

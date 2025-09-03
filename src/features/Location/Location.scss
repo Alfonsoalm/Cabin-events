@@ -1,6 +1,9 @@
+@use '../../scss/variables.scss' as vars;
+
 .location {
   padding: 3rem 1rem;
   text-align: center;
+  background-color: vars.$background-light;
 
   h2 {
     font-size: 2rem;

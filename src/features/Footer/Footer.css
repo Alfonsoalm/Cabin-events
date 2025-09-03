@@ -1,0 +1,32 @@
+.footer {
+  background-color: #341d07;
+  color: #f8e38a;
+  text-align: center;
+  padding: 2rem;
+}
+.footer .footer-links {
+  display: flex;
+  justify-content: center;
+  margin: 1rem auto;
+}
+.footer .footer-links a {
+  width: 4%;
+  color: #fff;
+  font-size: 1.5rem;
+  margin: 0;
+  transition: color 0.3s;
+}
+.footer .footer-links a:hover {
+  color: #ba9144;
+}
+.footer .footer-legal {
+  margin-top: 1rem;
+}
+.footer .footer-legal a {
+  color: #aaa;
+  margin: 0 0.3rem;
+  font-size: 0.9rem;
+}
+.footer .footer-legal a:hover {
+  color: #fff;
+}/*# sourceMappingURL=Footer.css.map */
