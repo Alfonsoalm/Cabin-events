@@ -1,23 +1,24 @@
 import React, { useState, useEffect } from "react";
+import { useGlobalContext } from "../context/GlobalContext";
 import "./CookieBanner.scss";
 
 const CookieBanner: React.FC = () => {
+  const { cookieConsent, setCookieConsent } = useGlobalContext();
   const [showBanner, setShowBanner] = useState<boolean>(false);
 
   useEffect(() => {
-    const consent = localStorage.getItem("cookieConsent");
-    if (!consent) {
-      setShowBanner(true);
-    }
-  }, []);
+    if (!cookieConsent) setShowBanner(true);
+  }, [cookieConsent]);
 
   const handleAccept = () => {
     localStorage.setItem("cookieConsent", "accepted");
+    setCookieConsent(true);
     setShowBanner(false);
   };
 
   const handleDecline = () => {
     localStorage.setItem("cookieConsent", "declined");
+    setCookieConsent(false);
     setShowBanner(false);
   };
 
@@ -30,12 +31,8 @@ const CookieBanner: React.FC = () => {
         ¿Aceptas su uso?
       </p>
       <div className="buttons">
-        <button className="accept" onClick={handleAccept}>
-          Aceptar
-        </button>
-        <button className="decline" onClick={handleDecline}>
-          Rechazar
-        </button>
+        <button className="accept" onClick={handleAccept}>Aceptar</button>
+        <button className="decline" onClick={handleDecline}>Rechazar</button>
       </div>
     </div>
   );
