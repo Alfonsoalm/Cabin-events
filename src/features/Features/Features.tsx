@@ -31,19 +31,19 @@ const Features = () => {
         <div className="price-items">
           <div className="price-item">
             <h3>Lunes a Jueves</h3>
-            <p><strong>99,99€</strong> / día</p>
+            <p><strong>100€</strong> / día</p>
             <p>Perfecto para clases, talleres o reuniones corporativas.</p>
           </div>
 
           <div className="price-item">
             <h3>Viernes y Domingos</h3>
-            <p><strong>119,99€</strong> / día</p>
+            <p><strong>120€</strong> / día</p>
             <p>Ideal para celebraciones y eventos puntuales.</p>
           </div>
 
           <div className="price-item">
             <h3>Sábados</h3>
-            <p><strong>149,99€</strong> / día</p>
+            <p><strong>150€</strong> / día</p>
             <p>El día más solicitado para fiestas y cumpleaños.</p>
           </div>
 
@@ -55,7 +55,7 @@ const Features = () => {
 
           <div className="price-item">
             <h3>Fianza</h3>
-            <p><strong>99,99€</strong></p>
+            <p><strong>100€</strong></p>
             <p>Reembolsable tras la inspección del espacio.</p>
           </div>
         </div>
