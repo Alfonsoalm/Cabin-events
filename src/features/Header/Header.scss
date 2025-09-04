@@ -72,7 +72,11 @@
         flex-direction: column;
         width: 100%;
 
-        a,
+        a {
+          width: 100%;
+          text-align: center;
+          padding: 0.2rem 0;
+        }
         .btn-reserve {
           width: 100%;
           text-align: center;

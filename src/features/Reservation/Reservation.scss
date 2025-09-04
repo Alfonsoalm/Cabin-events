@@ -30,6 +30,11 @@
     width: 50%;
     gap: 1.5rem;
 
+    // Media query para móviles (menos de 768px)
+    @media (max-width: 767px) {
+      width: 80%;
+    }
+
     .form-group {
       display: flex;
       flex-direction: column;
@@ -70,10 +75,6 @@
           color: vars.$text-color-medium;
           font-style: italic;
         }
-      }
-
-      &.half-width {
-        width: 100%; // Modificado para móviles
       }
     }
 
