@@ -93,8 +93,8 @@ const Reservation = () => {
     <section className="reservation-section" id="reservation">
       <div className="container">
         <header className="reservation-header">
-          <h2>Consulta sin compromiso</h2>
-          <p>Completa el formulario y nos pondremos en contacto contigo</p>
+          <h2>Consulta</h2>
+          <p>Completa el formulario sin compromiso y nos pondremos en contacto contigo</p>
         </header>
 
         <form className="reservation-form" onSubmit={handleSubmit}>
