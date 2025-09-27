@@ -48,12 +48,6 @@ const Reservation = () => {
     const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
     const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
-    // Usar un modal en lugar de alert
-    const showMessage = (message: string) => {
-        // Aquí puedes implementar una lógica para mostrar un modal con el mensaje
-        console.log(message);
-    };
-
     emailjs
       .send(
         serviceId,
