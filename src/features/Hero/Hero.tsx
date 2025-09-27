@@ -31,13 +31,6 @@ const Hero = React.memo(() => {
               Tu navegador no soporta el video.
             </video>
           </div>
-
-          <div className="hero-video">
-            <video autoPlay muted loop playsInline>
-              <source src="/video2.mp4" type="video/mp4" />
-              Tu navegador no soporta el video.
-            </video>
-          </div>
         </div>
       </div>
     </section>

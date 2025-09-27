@@ -6,9 +6,9 @@ import React from "react";
 import './Features.scss';
 
 const iconMap: Record<string, React.ReactNode> = {
-  clock: <FaRegClock size={32} />,
-  payment: <BsCashCoin size={32} />,
-  keys: <GiHouseKeys size={32} />,
+  clock: <FaRegClock size={42} />,
+  payment: <BsCashCoin size={42} />,
+  keys: <GiHouseKeys size={42} />,
 };
 
 const Features = () => {
@@ -17,11 +17,11 @@ const Features = () => {
 
       {/* Resto de features */}
       {featuresList.map((feature, index) => (
-        <article key={index} className="feature">
+        <div key={index} className="feature small">
           <h2>{feature.title}</h2>
           <p>{feature.desc}</p>
           {feature.icon && <div className="icon">{iconMap[feature.icon]}</div>}
-        </article>
+        </div>
       ))}
 
       {/* Bloque especial de precios */}
@@ -60,10 +60,10 @@ const Features = () => {
           </div>
         </div>
 
+      </article>
         <p className="cta-price">
           ¡Reserva ahora y asegura tu espacio para tu próximo evento!
         </p>
-      </article>
 
 
     </section>
