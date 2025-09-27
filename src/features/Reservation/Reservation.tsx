@@ -43,7 +43,6 @@ const Reservation = () => {
 
     // Usar un modal en lugar de alert
     const showMessage = (message: string) => {
-        // Aquí puedes implementar una lógica para mostrar un modal con el mensaje
         console.log(message);
     };
 
@@ -86,7 +85,7 @@ const Reservation = () => {
     <section className="reservation-section" id="reservation">
       <div className="container">
         <header className="reservation-header">
-          <h2>Reservas</h2>
+          <h2>Consulta sin compromiso</h2>
           <p>Completa el formulario y nos pondremos en contacto contigo</p>
         </header>
 
