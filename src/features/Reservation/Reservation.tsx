@@ -143,7 +143,7 @@ const Reservation = () => {
                 captionLayout="dropdown"
                 locale={es}
                 startMonth={new Date(2025, 9)}
-                endMonth={new Date(2026, 11)}
+                endMonth={new Date(2030, 11)}
               />
             </div>
           </div>
