@@ -142,7 +142,8 @@ const Reservation = () => {
                 disabled={blockedDates}
                 captionLayout="dropdown"
                 locale={es}
-                hidden={{ after: new Date(2026, 11, 31) }}
+                startMonth={new Date(2025, 9)}
+                endMonth={new Date(2026, 11)}
               />
             </div>
           </div>
