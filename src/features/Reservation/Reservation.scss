@@ -3,8 +3,9 @@
 
 .reservation-section {
   padding: 4rem 2rem;
-  max-width: 900px;
+  width: 100%;
   margin: 0 auto;
+  background-color: vars.$background-light;
 
   .reservation-header {
     text-align: center;
@@ -25,7 +26,14 @@
   .reservation-form {
     display: flex;
     flex-direction: column;
+    margin: 0 auto;
+    width: 50%;
     gap: 1.5rem;
+
+    // Media query para móviles (menos de 768px)
+    @media (max-width: 767px) {
+      width: 80%;
+    }
 
     .form-group {
       display: flex;
@@ -67,10 +75,6 @@
           color: vars.$text-color-medium;
           font-style: italic;
         }
-      }
-
-      &.half-width {
-        width: 100%; // Modificado para móviles
       }
     }
 
