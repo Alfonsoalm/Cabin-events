@@ -93,6 +93,16 @@
 
       .form-group.half-width {
         width: 48%;
+        .rdp-day.is-blocked {
+            color: red !important; 
+            background-color: #ffebeb;
+            // text-decoration: line-through;
+        }
+        .rdp-day[aria-disabled="true"].is-blocked {
+            color: red !important; 
+            opacity: 1; 
+            cursor: not-allowed; 
+        }
       }
     }
 

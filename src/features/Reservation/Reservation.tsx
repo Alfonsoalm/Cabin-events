@@ -140,6 +140,8 @@ const Reservation = () => {
                 selected={formData.date}
                 onSelect={(date) => setFormData((prev) => ({ ...prev, date }))}
                 disabled={blockedDates}
+                modifiers={{ blocked: blockedDates }}
+                modifiersClassNames={{ blocked: 'is-blocked' }} 
                 captionLayout="dropdown"
                 locale={es}
                 startMonth={new Date(2025, 9)}
