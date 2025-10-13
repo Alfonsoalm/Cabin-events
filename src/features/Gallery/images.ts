@@ -12,7 +12,7 @@ export const images: Image[] = [
   { src: './image50.webp', alt: 'Aforo de hasta 45 personas' },
   { src: './image51.webp', alt: 'Vista panorámica del salón' },
   { src: './image7.webp', alt: 'Photocall para hacerse fotos' },
-  { src: './image3.webp', alt: 'Televisor de 75 pulgadas con altavoces integrados' },
+  { src: './image3.webp', alt: 'Televisor de 75 pulgadas con wifi y altavoces integrados' },
   { src: './image10.webp', alt: 'Cocina integrada con horno grande, pequeño, microondas, frigorifico, congelador' },
   { src: './image5.webp', alt: 'Hall de baño' },
   { src: './image19.webp', alt: 'Mobiliario reconfigurable' },
