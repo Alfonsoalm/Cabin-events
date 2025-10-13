@@ -36,7 +36,7 @@ const Features = () => {
           </div>
 
           <div className="price-item">
-            <h3>Viernes y Domingos</h3>
+            <h3>Viernes, Domingos y Festivos entre semana</h3>
             <p><strong>120€</strong> / día</p>
             <p>Ideal para celebraciones y eventos puntuales.</p>
           </div>
