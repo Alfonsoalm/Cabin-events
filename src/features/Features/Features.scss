@@ -13,8 +13,7 @@
     max-width: 300px;
     align-content: space-between;
     background-color: vars.$card-background;
-    padding: 2rem 0.8rem;
-    border: 3px solid rgba(66, 49, 2, 0.728);
+    padding: 2rem 1.5rem;
     border-radius: vars.$border-radius;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
     transition: transform 0.3s, box-shadow 0.3s;
@@ -43,13 +42,32 @@
       margin-top: 1rem;
       color: vars.$primary-color;
     }
+
+    &.price {
+      flex: 1 1 100%; // hace que ocupe todo el ancho
+      max-width: 800px;
+      padding: 3rem 2rem; // más grande que los otros
+      background: linear-gradient(135deg, vars.$primary-color, vars.$secondary-color);
+      border-radius: vars.$border-radius;
+
+      h2 {
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+      }
+
+      p {
+        font-size: 1.3rem;
+        font-weight: bold;
+        margin: 0.5rem 0;
+      }
+    }
   }
 
   .feature.price {
     flex: 1 1 100%;
     max-width: 800px;
     padding: 3rem 2rem;
-    background: linear-gradient(105deg, #f8e38a, #f8e38a);
+    background: linear-gradient(105deg, #f8e38a, #f8e38a); // gradiente azul-morado
     color: vars.$text-color-dark;
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
     text-align: center;
@@ -68,8 +86,6 @@
       .price-item {
         flex: 1 1 250px;
         background: rgba(255, 255, 255, 0.1);
-        border: 2px solid rgba(66, 49, 2, 0.728);
-        border-radius: 7px;
         padding: 1rem 1.5rem;
         margin-bottom: 1rem;
         text-align: center;
